@@ -1,0 +1,21 @@
+<template name="GDPR">
+    {{#if showConsentWindow}}
+    {{> ConsentWindow}}
+    {{/if}}
+</template>
+
+<template name="ConsentWindow">
+    <div>the ConsentWindow is shown</div>
+    <hr>
+
+    <form>
+        <div>
+            <input type="checkbox" id="allIsRead" name="allIsRead" value="allIsRead" required>
+            <label for="allIsRead">I've read all this stuff</label>
+        </div>
+        <div>
+            <button type="submit">I give my consent</button>
+        </div>
+    </form>
+
+</template>
