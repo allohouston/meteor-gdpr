@@ -1,2 +1,2 @@
 # meteor-gdpr
-GRPD package for meteor framework
+DGPR package for meteor framework
