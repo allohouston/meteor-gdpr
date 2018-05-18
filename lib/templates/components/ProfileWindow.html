@@ -1,0 +1,52 @@
+<template name="ProfileWindow">
+    <div class="modal fade" id="profileModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title">{{getTitle}}</h4>
+                </div>
+                <div class="modal-body">
+                    <div>{{getYourLastConnection}}: {{getLastConnection}}</div>
+
+                    <button type="button" class="js-showContact">{{getContactBtn}}</button>
+                    {{#if showContactForm}}
+                    {{> ContactForm}}
+                    {{/if}}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">{{getCloseBtn}}</button>
+
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+</template>
+
+<template name="ContactForm">
+    <form>
+        <div class="form-group">
+            <label for="emailValue">{{getEmailLabel}}</label>
+            <span id="emailValue">{{getEmail}}</span>
+        </div>
+        <div class="form-group">
+            <label for="object">{{getSubject}}</label>
+            <select class="form-control" id="object">
+                {{#each type in getRequestTypes}}
+                <option value="{{type.value}}">{{type.label}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="message">{{getComment}}</label>
+            <textarea class="form-control" id="message" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">{{getValidationBtn}}</button>
+        </div>
+    </form>
+</template>

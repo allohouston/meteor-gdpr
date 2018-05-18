@@ -15,19 +15,32 @@ Package.onUse(function (api) {
     api.use([
         'ecmascript',
         'mdg:validated-method',
+        'ziarno:restrict-mixin',
         'accounts-base',
-        'accounts-password'
+        'accounts-password',
+        'aldeed:collection2@3.0.0'
     ]);
 
     api.use([
         'templating',
     ], 'client');
 
-    api.add_files('lib/templates/GDPR.js', 'client');
+    api.addFiles('lib/templates/GDPR.js', 'client');
 
-    api.add_files('lib/server/index.js', 'server');
+    // server files to expose
+    api.addFiles([
+        // publications
+        'lib/api/user/server/publication.js',
+        // methods
+        'lib/api/user/methods.js',
+        'lib/api/request/methods.js',
 
-    api.mainModule('gdpr.js', 'client');
+    ], 'server');
+
+    api.addFiles('lib/GDPR.js', 'client');
+    api.export('GDPRconfig', 'client');
+
+    //api.mainModule('gdpr.js', 'client');
 });
 
 Package.onTest(function (api) {
