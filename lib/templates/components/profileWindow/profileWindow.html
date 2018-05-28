@@ -30,20 +30,20 @@
 <template name="ContactForm">
     <form>
         <div class="form-group">
-            <label for="emailValue">{{getEmailLabel}}</label>
-            <span id="emailValue">{{getEmail}}</span>
+            <label for="EmailValue">{{getEmailLabel}}</label>
+            <span id="EmailValue">{{getEmail}}</span>
         </div>
         <div class="form-group">
-            <label for="object">{{getSubject}}</label>
-            <select class="form-control" id="object">
+            <label for="Object">{{getSubject}}</label>
+            <select class="form-control" id="Object">
                 {{#each type in getRequestTypes}}
                     <option value="{{type.value}}">{{type.label}}</option>
                 {{/each}}
             </select>
         </div>
         <div class="form-group">
-            <label for="message">{{getComment}}</label>
-            <textarea class="form-control" id="message" rows="3"></textarea>
+            <label for="Message">{{getComment}}</label>
+            <textarea class="form-control" id="Message" rows="3"></textarea>
         </div>
         <div class="form-group">
             <button type="submit" class="btn btn-primary">{{getValidationBtn}}</button>
