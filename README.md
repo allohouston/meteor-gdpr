@@ -1,22 +1,40 @@
 # meteor-gdpr
-GDPR package for meteor framework
+GDPR package for the meteor framework. 
 
+This packages helps you comply with GDPR. It includes : 
+- presentation to users of a customizable opt-in window that they are forced to validate to use the app
+- access to a profile center including first name, last name, picture, last connexion date, disconnect button
+- ability to contact you by email (using a form) to ask for access, modification or deletion of personnal data
+
+
+## Requirements
 This package requires the [simpl-schema](https://github.com/aldeed/simple-schema-js) NPM package @1.4.3, which defines the schema syntax and provides the validation logic.
 
+This packages requires the definition of the `MAIL_URL` variable to send emails.
 
-## uses
+## How to use
 Add the following to your project template
 
 ```
 {{> ProfileName }}
 ```
 
-### i18n
-you can add i18n as follow
+### Email personalization
 
+In your `imports/startup/server/index.js` file :
+```javascript
+GDPR.addServerConfig({
+    emailSender: "no-reply@app.com",
+    emailTo: "contact@app.com"
+});
 ```
-import { GDPRconfig } from 'meteor/yellowsquare:gdpr';
 
+### Customization of the texts
+Two languages are built-in : english and french. Anyway you need to review and personnalize the texts presented according to your entity.
+
+You can add or modify a translation as follow
+
+```javascript
 Meteor.startup(function () {
     GDPRconfig.addi18n({
         language: 'en',
@@ -51,16 +69,16 @@ If you add the same language twice, the previous insert is overriden
 
 The last language inserted is used. If you want a previously inserted language, do as follow
 
-```
+```javascript
 GDPRconfig.language = 'wanted language (2 letters)'
 ```
 
-### user personal data
+### User personal data
 The package needs to access the user firstname, lastname and picture, from the user collection record.
 
 Default values are :
 
-```
+```javascript
 {
     firstname: 'profile.firstname',
     lastname: 'profile.lastname',
@@ -70,7 +88,7 @@ Default values are :
 
 But you can set your values as follow :
 
-```
+```javascript
 GDPRconfig.setUserFields({
     firstname: 'personalData.FirstName',
     lastname: 'personalData.surname',

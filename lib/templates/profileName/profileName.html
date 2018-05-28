@@ -1,9 +1,7 @@
 <template name="ProfileName">
-    <div id="ProfileName">
+    {{#if currentUser}}
 
-        {{#if currentUser}}
-            {{> ConsentWindow}}
-
+        <div id="ProfileName">
             <div class="profileAccessLink js-profileAccess">
                 <div class="firstName">
                     {{firstName}}
@@ -15,10 +13,16 @@
                     <img src="{{picture}}" alt="User picture">
                 </div>
             </div>
+        </div>
 
+        {{#if showProfileWindow}}
+            {{> ProfileWindow}}
         {{/if}}
-    </div>
-    {{#if showProfileWindow}}
-        {{> ProfileWindow}}
+
+        {{! modals }}
+        {{> ConsentWindow}}
+        {{> ContactForm}}
+
     {{/if}}
+
 </template>

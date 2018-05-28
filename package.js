@@ -10,7 +10,11 @@ Package.describe({
     documentation: 'README.md'
 });
 
-Npm.depends({"moment": "2.22.1", "simpl-schema": "1.4.3"});
+Npm.depends({
+    "moment": "2.22.1",
+    "simpl-schema": "1.4.3",
+    "jquery": "3.3.1",
+});
 
 Package.onUse(function (api) {
     api.versionsFrom('1.4');
@@ -22,25 +26,43 @@ Package.onUse(function (api) {
         'ziarno:restrict-mixin',
         'accounts-base',
         'accounts-password',
-        'aldeed:collection2@3.0.0'
+        'aldeed:collection2@3.0.0',
+        'twbs:bootstrap',
+        'email',
     ]);
 
     api.use([
         'templating',
     ], 'client');
 
-    api.addFiles('lib/templates/profileName/profileName.js', 'client');
+    api.use('themeteorchef:bert');
 
-    // server files to expose
+    // files in API used in both contexts
+    api.addFiles([
+        'lib/api/request/index.js',
+        'lib/api/user/index.js',
+        'lib/api/user/methods.js',
+    ], ["client", "server"]);
+
+    // server side configuration and object
     api.addFiles([
         // publications
         'lib/api/user/server/publication.js',
-        // methods
-        'lib/api/user/methods.js',
+        // server side methods
+        'lib/api/request/server/methods.js',
 
+        'lib/api/server/index.js',
     ], 'server');
+    api.export('GDPR', 'server');
 
-    api.addFiles('lib/GDPR.js', 'client');
+
+    // client side templates
+    api.addFiles('lib/templates/profileName/profileName.js', 'client');
+
+    // client side configuration :
+    api.addFiles('lib/GDPRConfig.js', 'client');
+    //api.addFiles('lib/i18n/en.js', 'client');
+    api.addFiles('lib/i18n/fr.js', 'client');
     api.export('GDPRconfig', 'client');
 
 });
