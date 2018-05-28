@@ -1,6 +1,9 @@
 # meteor-gdpr
 GDPR package for meteor framework
 
+This package requires the [simpl-schema](https://github.com/aldeed/simple-schema-js) NPM package @1.4.3, which defines the schema syntax and provides the validation logic.
+
+
 ## uses
 Add the following to your project template
 
@@ -74,3 +77,5 @@ GDPRconfig.setUserFields({
     picture: 'avatar'
 })
 ```
+
+
