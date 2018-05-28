@@ -27,26 +27,3 @@
 
 </template>
 
-<template name="ContactForm">
-    <form>
-        <div class="form-group">
-            <label for="EmailValue">{{getEmailLabel}}</label>
-            <span id="EmailValue">{{getEmail}}</span>
-        </div>
-        <div class="form-group">
-            <label for="Object">{{getSubject}}</label>
-            <select class="form-control" id="Object">
-                {{#each type in getRequestTypes}}
-                    <option value="{{type.value}}">{{type.label}}</option>
-                {{/each}}
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="Message">{{getComment}}</label>
-            <textarea class="form-control" id="Message" rows="3"></textarea>
-        </div>
-        <div class="form-group">
-            <button type="submit" class="btn btn-primary">{{getValidationBtn}}</button>
-        </div>
-    </form>
-</template>

@@ -16,6 +16,7 @@ Package.onUse(function (api) {
     api.versionsFrom('1.4');
     api.use([
         'underscore',
+        'less',
         'ecmascript',
         'mdg:validated-method',
         'ziarno:restrict-mixin',
