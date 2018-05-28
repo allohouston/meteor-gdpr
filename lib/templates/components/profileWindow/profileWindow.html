@@ -7,18 +7,18 @@
                         <span aria-hidden="true">&times;</span>
                         <span class="sr-only">Close</span>
                     </button>
-                    <h4 class="modal-title">{{getTitle}}</h4>
+                    <h4 class="modal-title">{{getI18nText "title"}}</h4>
                 </div>
                 <div class="modal-body">
-                    <div>{{getYourLastConnection}}: {{getLastConnection}}</div>
+                    <div>{{getI18nText "lastConnection"}}: {{getLastConnection}}</div>
 
-                    <button type="button" class="js-showContact">{{getContactBtn}}</button>
+                    <button type="button" class="js-showContact">{{getI18nText "contactBtn"}}</button>
                     {{#if showContactForm}}
                         {{> ContactForm}}
                     {{/if}}
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">{{getCloseBtn}}</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">{{getI18nText "closeBtn"}}</button>
 
                 </div>
             </div><!-- /.modal-content -->

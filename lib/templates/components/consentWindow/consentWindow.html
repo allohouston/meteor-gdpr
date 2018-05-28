@@ -7,23 +7,23 @@
                         <span aria-hidden="true">&times;</span>
                         <span class="sr-only">Close</span>
                     </button-->
-                    <h4 class="modal-title">{{getTitle}}</h4>
+                    <h4 class="modal-title">{{getI18nText "title"}}</h4>
                 </div>
                 <form>
                     <div class="modal-body">
 
-                        {{{getContent}}}
+                        {{{getI18nText "content"}}}
 
                         <div>
                             <input type="checkbox" id="AllIsRead" name="allIsRead" value="allIsRead" required>
-                            <label for="AllIsRead">{{getConfirmationBox}}</label>
+                            <label for="AllIsRead">{{getI18nText "confirmationBox"}}</label>
                         </div>
 
 
                     </div>
                     <div class="modal-footer">
                         <!--button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button-->
-                        <button type="submit" class="btn btn-primary">{{getValidationBtn}}</button>
+                        <button type="submit" class="btn btn-primary">{{getI18nText "validationBtn"}}</button>
                     </div>
                 </form>
             </div><!-- /.modal-content -->
