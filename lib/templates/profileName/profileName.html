@@ -3,7 +3,6 @@
 
         {{#if currentUser}}
             {{> ConsentWindow}}
-            {{> ProfileWindow}}
 
             <div class="profileAccessLink js-profileAccess">
                 <div class="firstName">
@@ -16,6 +15,10 @@
                     <img src="{{picture}}" alt="User picture">
                 </div>
             </div>
+
         {{/if}}
     </div>
+    {{#if showProfileWindow}}
+        {{> ProfileWindow}}
+    {{/if}}
 </template>

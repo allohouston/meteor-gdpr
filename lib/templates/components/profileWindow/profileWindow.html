@@ -1,29 +1,24 @@
 <template name="ProfileWindow">
-    <div class="modal fade" id="ProfileModal">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                        <span class="sr-only">Close</span>
-                    </button>
-                    <h4 class="modal-title">{{getI18nText "title"}}</h4>
+    <div class="" id="ProfileWindow">
+        <div class="profileWindowContainer">
+            <div class="headerZone">
+                <div class="mainInformationArea">
+                    <div class="name">{{userName}}</div>
+                    <div class="lastConnexion">{{getI18nText "lastConnection"}} {{getLastConnection}}</div>
                 </div>
-                <div class="modal-body">
-                    <div>{{getI18nText "lastConnection"}}: {{getLastConnection}}</div>
-
-                    <button type="button" class="js-showContact">{{getI18nText "contactBtn"}}</button>
-                    {{#if showContactForm}}
-                        {{> ContactForm}}
-                    {{/if}}
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">{{getI18nText "closeBtn"}}</button>
+                <div class="logoutButtonArea">
 
                 </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
+
+            </div>
+            <div class="informationZone">
+                <div class="informationArea">{{getI18nText "legalNotice"}}</div>
+                <div class="contactButtonArea">
+                    <button type="button" class="btn btn-info js-showContact">{{getI18nText "contactBtn"}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </template>
 
