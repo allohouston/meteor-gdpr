@@ -14,7 +14,7 @@
 
                     <button type="button" class="js-showContact">{{getContactBtn}}</button>
                     {{#if showContactForm}}
-                    {{> ContactForm}}
+                        {{> ContactForm}}
                     {{/if}}
                 </div>
                 <div class="modal-footer">
@@ -37,7 +37,7 @@
             <label for="object">{{getSubject}}</label>
             <select class="form-control" id="object">
                 {{#each type in getRequestTypes}}
-                <option value="{{type.value}}">{{type.label}}</option>
+                    <option value="{{type.value}}">{{type.label}}</option>
                 {{/each}}
             </select>
         </div>

@@ -1,11 +1,11 @@
 <template name="GDPR">
 
     {{#if currentUser}}
-    {{> ConsentWindow}}
-    {{> ProfileWindow}}
+        {{> ConsentWindow}}
+        {{> ProfileWindow}}
 
-    <div class="profileAccessLink">
-        <a href="#" class="js-profileAccess">{{getProfileLinkText}}</a>
-    </div>
+        <div class="profileAccessLink">
+            <a href="#" class="js-profileAccess">{{getProfileLinkText}}</a>
+        </div>
     {{/if}}
 </template>
