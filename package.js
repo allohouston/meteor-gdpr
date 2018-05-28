@@ -10,7 +10,7 @@ Package.describe({
     documentation: 'README.md'
 });
 
-Npm.depends({"moment": "2.22.1", "simpl-schema": "1.4.3", "@jkhong/devutils": "1.0.0"});
+Npm.depends({"moment": "2.22.1", "simpl-schema": "1.4.3"});
 
 Package.onUse(function (api) {
     api.versionsFrom('1.4');
