@@ -8,7 +8,7 @@ This package requires the [simpl-schema](https://github.com/aldeed/simple-schema
 Add the following to your project template
 
 ```
-{{> GDPR }}
+{{> ProfileName }}
 ```
 
 ### i18n

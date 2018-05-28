@@ -29,7 +29,7 @@ Package.onUse(function (api) {
         'templating',
     ], 'client');
 
-    api.addFiles('lib/templates/GDPR.js', 'client');
+    api.addFiles('lib/templates/profileName/profileName.js', 'client');
 
     // server files to expose
     api.addFiles([
@@ -37,7 +37,6 @@ Package.onUse(function (api) {
         'lib/api/user/server/publication.js',
         // methods
         'lib/api/user/methods.js',
-        'lib/api/request/methods.js',
 
     ], 'server');
 

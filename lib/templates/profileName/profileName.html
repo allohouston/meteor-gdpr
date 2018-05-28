@@ -1,0 +1,21 @@
+<template name="ProfileName">
+    <div id="ProfileName">
+
+        {{#if currentUser}}
+            {{> ConsentWindow}}
+            {{> ProfileWindow}}
+
+            <div class="profileAccessLink js-profileAccess">
+                <div class="firstName">
+                    {{firstName}}
+                </div>
+                <div class="lastName">
+                    {{lastName}}
+                </div>
+                <div class="userPicture">
+                    <img src="{{picture}}" alt="User picture">
+                </div>
+            </div>
+        {{/if}}
+    </div>
+</template>
