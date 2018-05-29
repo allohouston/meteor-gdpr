@@ -1,6 +1,23 @@
 # meteor-gdpr
 GDPR package for the meteor framework. 
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Disclaimer](#disclaimer)
+- [Introduction](#introduction)
+- [Requirements](#requirements)
+- [How to use](#how-to-use)
+  - [Email personalization](#email-personalization)
+  - [Customization of the texts](#customization-of-the-texts)
+  - [User personal data](#user-personal-data)
+- [Contributions](#contributions)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+
+
 ## Disclaimer
 We are not lawyers, you cannot rely only on using this package to be GDPR compliant. You can find official reglementation [here](https://ec.europa.eu/commission/priorities/justice-and-fundamental-rights/data-protection/2018-reform-eu-data-protection-rules_en). We advise you to read and understand the whereabouts before using the package.
 
@@ -86,4 +103,9 @@ GDPRconfig.setUserFields({
 });
 ```
 
+
+## Contributions
+Contributions are welcome, please post issues or pull requests! This package has been created in May 2018. We tried to make it generic and easy to use to help other people who where struggling with GDPR, but it is surely not perfect. We will be very happy to see its use and functionalities growing.
+
+Please respect the code style when contributing.
 
