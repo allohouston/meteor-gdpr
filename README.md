@@ -1,10 +1,24 @@
 # meteor-gdpr
 GDPR package for the meteor framework. 
 
+## Disclaimer
+We are not lawyers, you cannot rely only on using this package to be GDPR compliant. You can find official reglementation [here](https://ec.europa.eu/commission/priorities/justice-and-fundamental-rights/data-protection/2018-reform-eu-data-protection-rules_en). We advise you to read and understand the whereabouts before using the package.
+
+## Introduction
 This packages helps you comply with GDPR. It includes : 
-- presentation to users of a customizable opt-in window that they are forced to validate to use the app
-- access to a profile center including first name, last name, picture, last connexion date, disconnect button
-- ability to contact you by email (using a form) to ask for access, modification or deletion of personnal data
+* a modal presenting a customizable opt-in window to users, which should contain :
+    - which personal data you collect 
+    - which entity is collecting the data
+    - information about the purpose of personal data collection
+    - personal data conservation rules
+    - rights of the user about his data
+    - it could also contain your app Terms of Service
+    
+* access to a profile center (overlay div) which includes
+    - first name, last name, picture
+    - last connexion date
+    - disconnect button
+    - ability to contact you by email (using an in-app form) to ask for access, modification or deletion of personal data
 
 
 ## Requirements
@@ -13,15 +27,17 @@ This package requires the [simpl-schema](https://github.com/aldeed/simple-schema
 This packages requires the definition of the `MAIL_URL` variable to send emails.
 
 ## How to use
-Add the following to your project template
+Create a template containing all the information you want to display in the opt-in window, you can name it as you wish. Here we name it `OptInTemplate`
+
+Add the following in your app to activate the package
 
 ```html
-{{> ProfileName }}
+{{> ProfileName optIn="OptInTemplate"}}
 ```
 
 You can add an extraTemplate on the lower part of the Profile window (you could use it to include some more details about the user on the lower part)
 ```html
-{{> ProfileName extraTemplate="TemplateName"}}
+{{> ProfileName optIn="OptInTemplate" extraTemplate="TemplateName"}}
 ```
 
 ### Email personalization
@@ -35,47 +51,14 @@ GDPR.addServerConfig({
 ```
 
 ### Customization of the texts
-Two languages are built-in : english and french. Anyway you need to review and personnalize the texts presented according to your entity.
+Two languages are built-in : english `en` and french `fr`. Anyway you need to review and personalize the texts presented according to your entity. The reference files are available in `lib/i18n`, we encourage you to copy and modify it in your app.
 
-You can add or modify a translation as follow
-
-```javascript
-Meteor.startup(function () {
-    GDPRconfig.addi18n({
-        language: 'en',
-        consentWindow: {
-            title: 'You need to give your consent',
-            content: 'some legal stuff',
-            confirmationBox: "I've read and i agree",
-            validationBtn: 'I validate'
-        },
-        profileWindow: {
-            title: 'Your Profile',
-            lastConnection: ' Last connection',
-            contactBtn: 'Contact',
-            closeBtn: 'Close'
-        },
-        contactForm: {
-            email: 'Your email',
-            subject: 'What do you want?',
-            change: 'I want to change my data',
-            access: "I want access to my data",
-            delete: 'I want to delete my data',
-            comment: 'Your message',
-            validationBtn: 'I validate'
-        }
-    });
-}
-});
-```
-You can add as many translation as you want.
-
-If you add the same language twice, the previous insert is overriden
+You can add as many translation as you want. If you add the same language twice, the previous insert is overriden
 
 The last language inserted is used. If you want a previously inserted language, do as follow
 
 ```javascript
-GDPRconfig.language = 'wanted language (2 letters)'
+GDPRconfig.language = 'wanted language (2 letters)';
 ```
 
 ### User personal data
@@ -98,7 +81,7 @@ GDPRconfig.setUserFields({
     firstname: 'personalData.FirstName',
     lastname: 'personalData.surname',
     picture: 'avatar'
-})
+});
 ```
 
 

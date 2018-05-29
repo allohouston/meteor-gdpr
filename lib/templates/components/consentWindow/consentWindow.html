@@ -11,9 +11,7 @@
                 </div>
                 <form>
                     <div class="modal-body">
-
-                        {{{getI18nText "content"}}}
-
+                        {{> Template.dynamic template=optIn}}
                         <div>
                             <input type="checkbox" id="AllIsRead" name="allIsRead" value="allIsRead" required>
                             <label for="AllIsRead">{{getI18nText "confirmationBox"}}</label>
