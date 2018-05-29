@@ -68,8 +68,8 @@ Package.onUse(function (api) {
 });
 
 Package.onTest(function (api) {
-    api.use('ecmascript');
-    api.use('tinytest');
+    api.use(['ecmascript', 'mongo', 'meteortesting:mocha', 'practicalmeteor:chai', 'johanbrook:publication-collector']);
     api.use('yellowsquare:gdpr');
     api.mainModule('gdpr-tests.js');
 });
+

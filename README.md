@@ -1,6 +1,8 @@
 # meteor-gdpr
 GDPR package for the meteor framework used with Blaze
 
+Add it to your app using `meteor add yellowsquare:gdpr`
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
@@ -107,5 +109,11 @@ GDPRconfig.setUserFields({
 ## Contributions
 Contributions are welcome, please post issues or pull requests! This package has been created in May 2018. We tried to make it generic and easy to use to help other people who where struggling with GDPR, but it is surely not perfect. We will be very happy to see its use and functionalities growing.
 
-Please respect the code style when contributing.
+Please respect the code style when contributing, and the tests.
 
+### How to test
+
+To test the app while developping, run the following command:
+```
+meteor npm run testwatch 
+```

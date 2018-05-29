@@ -10,7 +10,8 @@
     },
     "devDependencies": {},
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "testwatch": "TEST_WATCH=1 meteor --allow-superuser test-packages --driver-package meteortesting:mocha ./ --port 3002",
+        "test": "meteor --allow-superuser test-packages --once --driver-package meteortesting:mocha ./ "
     },
     "repository": {
         "type": "git",
