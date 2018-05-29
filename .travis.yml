@@ -7,8 +7,7 @@ before_script:
   # Add meteor to path (instead of asking for sudo in the Travis container)
   # We can then use the faster container infrastructure - http://docs.travis-ci.com/user/workers/container-based-infrastructure/
   - export PATH=$HOME/.meteor:$PATH
-  - npm install
-  - meteor npm install simpl-schema
+  - meteor npm install
 cache:
   directories:
-    - node_modules
+    - .npm/package/node_modules
