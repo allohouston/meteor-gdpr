@@ -1,6 +1,8 @@
 # meteor-gdpr
 GDPR package for the meteor framework used with Blaze
 
+[![Build Status](https://travis-ci.org/yellowsquaresas/meteor-gdpr.svg?branch=master)](https://travis-ci.org/yellowsquaresas/meteor-gdpr)
+
 Add it to your app using `meteor add yellowsquare:gdpr`
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
