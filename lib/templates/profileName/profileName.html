@@ -15,7 +15,7 @@
             </div>
         </div>
 
-        <div id="ModalWrapper">
+        <div id="WindowWrapper">
             {{! modals }}
             {{#if showProfileWindow}}
                 {{> ProfileWindow extraTemplate=extraTemplate}}
@@ -23,8 +23,8 @@
             {{#if showConsentWindow}}
                 {{> ConsentWindow optIn=optIn}}
             {{/if}}
-            {{#if showContactForm}}
-                {{> ContactForm}}
+            {{#if showContactWindow}}
+                {{> ContactWindow}}
             {{/if}}
         </div>
 

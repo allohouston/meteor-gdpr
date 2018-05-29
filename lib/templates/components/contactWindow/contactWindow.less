@@ -1,0 +1,71 @@
+#ContactWindow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 20;
+    color: black;
+    display: flex;
+    justify-content: center;
+
+    .contactWindowContainer {
+        position: absolute;
+        top: 100px;
+        width: 50%;
+        height: 450px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        background-color: white;
+        overflow-y: initial !important;
+        padding: 10px 20px;
+
+        .headerZone {
+            .headerTitle {
+
+            }
+        }
+        .mainZone {
+            height: 300px;
+            padding: 10px 0;
+            .itemInputZone {
+                padding-bottom: 20px;
+                font-size: 14px;
+                label {
+                    font-weight: 700;
+                }
+                .itemInput {
+                    display: block;
+                    width: 100%;
+                    box-sizing: border-box;
+                    margin-top: 8px;
+                    line-height: 1.5;
+                }
+                select {
+                    font-size: 14px;
+                    display: inline-block;
+                    width: 100%;
+                    height: 2rem;
+                    padding: .375rem 1.75rem .375rem .75rem;
+                    color: #495057;
+                    vertical-align: middle;
+                    background: #fff;
+                    background-size: 8px 10px;
+                    border: 1px solid #ced4da;
+                    border-radius: .25rem;
+                }
+                textarea {
+                    font-size: 14px;
+                    width: calc(100% - 10px);
+                    padding-left: 10px;
+                    resize: none;
+                    overflow: auto;
+                }
+            }
+        }
+        .footerZone {
+
+        }
+    }
+}

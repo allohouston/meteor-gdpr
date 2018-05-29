@@ -1,0 +1,38 @@
+<!-- File name = contactWindow -->
+<template name="ContactWindow">
+    <div id="ContactWindow">
+        <div class="contactWindowContainer">
+            <div class="headerZone">
+                <h4 class="headerTitle">{{getI18nText "title"}}</h4>
+            </div>
+            <form>
+
+                <div class="mainZone">
+                    <div class="itemInputZone">
+                        <label for="EmailValue">{{getI18nText 'email'}}</label>
+                        <span id="EmailValue">{{getEmail}}</span>
+                    </div>
+                    <div class="itemInputZone">
+
+                        <label for="Object">{{getI18nText "subject"}}</label>
+                        <select required class="itemInput" id="Object">
+                            <option value="" disabled selected>{{getI18nText 'selectPlaceholder'}}</option>
+                            {{#each type in getRequestTypes}}
+                                <option value="{{type.value}}">{{type.label}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                    <div class="itemInputZone">
+                        <label for="Message">{{getI18nText "comment"}}</label>
+                        <textarea required class="itemInput" id="Message" rows="7"></textarea>
+                    </div>
+
+
+                </div>
+                <div class="footerZone">
+                    <button type="submit" class="button-primary">{{getI18nText "validationBtn"}}</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</template>
