@@ -1,25 +1,23 @@
 <template name="ConsentWindow">
-    <div class="modal fade" id="ConsentModal" data-keyboard="false" data-backdrop="static">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">{{getI18nText "title"}}</h4>
-                </div>
-                <form>
-                    <div class="modal-body">
-                        {{! scrollable area }}
-                        {{> Template.dynamic template=optIn}}
-                        <div>
-                            <input type="checkbox" id="AllIsRead" name="allIsRead" value="allIsRead" required>
-                            <label for="AllIsRead">{{getI18nText "confirmationBox"}}</label>
-                        </div>
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary">{{getI18nText "validationBtn"}}</button>
-                    </div>
-                </form>
+    <div id="ConsentWindow">
+        <div class="consentWindowContainer">
+            <div class="headerZone">
+                <h4 class="headerTitle">{{getI18nText "title"}}</h4>
             </div>
+            <form>
+
+                <div class="mainZone">
+                    {{! scrollable area }}
+                    {{> Template.dynamic template=optIn}}
+                    <div class="optInInputZone">
+                        <input type="checkbox" id="AllIsRead" name="allIsRead" value="allIsRead" required>
+                        <label for="AllIsRead">{{getI18nText "confirmationBox"}}</label>
+                    </div>
+                </div>
+                <div class="footerZone">
+                    <button type="submit" class="button-primary">{{getI18nText "validationBtn"}}</button>
+                </div>
+            </form>
         </div>
     </div>
 </template>

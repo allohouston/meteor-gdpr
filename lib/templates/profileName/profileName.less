@@ -2,6 +2,7 @@
     position: relative;
     width: 200px;
     height: 50px;
+    font-family: Arial;
     .profileAccessLink {
         position: absolute;
         top: 0;
@@ -31,5 +32,60 @@
                 border-radius: 100%;
             }
         }
+    }
+}
+
+#WindowWrapper {
+    font-family: Arial;
+
+    button {
+        display: inline-block;
+        font-weight: 400;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        user-select: none;
+        border: 1px solid transparent;
+        padding: .375rem .75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        border-radius: .25rem;
+        transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        cursor: pointer;
+        &.button-info {
+            color: #fff;
+            background-color: #17a2b8;
+            border-color: #17a2b8;
+        }
+        &.button-info:hover {
+            background-color: #138496;
+            border-color: #117a8b;
+        }
+        &.button-primary {
+            color: #fff;
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        &.button-primary:hover {
+            background-color: #0069d9;
+            border-color: #0062cc;
+        }
+    }
+
+    .headerZone {
+        border-bottom: 1px solid #e9ecef;
+        display: flex;
+        align-items: center;
+        .headerTitle {
+            line-height: 1.5;
+            font-weight: 700;
+        }
+    }
+    .footerZone {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        border-top: 1px solid #e9ecef;
+        padding: 1rem;
     }
 }

@@ -7,14 +7,14 @@
                     <div class="lastConnexion">{{getI18nText "lastConnection"}} {{getLastConnection}}</div>
                 </div>
                 <div class="logoutButtonArea">
-                    <i class="fa fa-power-off"></i>
+                    <img src="packages/yellowsquare_gdpr/lib/assets/power.svg" alt="disconnect" class="js-logout">
                 </div>
 
             </div>
             <div class="informationZone">
                 <div class="informationArea">{{getI18nText "legalNotice"}}</div>
                 <div class="contactButtonArea">
-                    <button type="button" class="btn btn-info js-showContact">{{getI18nText "contactBtn"}}</button>
+                    <button type="button" class="button-info js-showContact">{{getI18nText "contactBtn"}}</button>
                 </div>
             </div>
             {{> Template.dynamic template=extraTemplate}}
