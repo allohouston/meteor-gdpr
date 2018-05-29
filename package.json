@@ -1,0 +1,26 @@
+{
+    "name": "meteor-gdpr",
+    "version": "1.0.0",
+    "description": "",
+    "main": "gdpr-tests.js",
+    "directories": {
+        "lib": "lib"
+    },
+    "dependencies": {
+    },
+    "devDependencies": {},
+    "scripts": {
+        "testwatch": "TEST_WATCH=1 meteor --allow-superuser test-packages --driver-package meteortesting:mocha ./ --port 3002",
+        "test": "meteor --allow-superuser test-packages --once --driver-package meteortesting:mocha ./ "
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/yellowsquaresas/meteor-gdpr.git"
+    },
+    "author": "Yellow Square SAS",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/yellowsquaresas/meteor-gdpr/issues"
+    },
+    "homepage": "https://github.com/yellowsquaresas/meteor-gdpr#readme"
+}

@@ -1,0 +1,28 @@
+<template name="ProfileName">
+    {{#if currentUser}}
+
+        <div id="ProfileName">
+            <div class="profileAccessLink js-profileAccess">
+                <div class="firstName">
+                    {{firstName}}
+                </div>
+                <div class="lastName">
+                    {{lastName}}
+                </div>
+                <div class="userPicture">
+                    <img src="{{picture}}" alt="User picture">
+                </div>
+            </div>
+        </div>
+
+        {{#if showProfileWindow}}
+            {{> ProfileWindow extraTemplate=extraTemplate}}
+        {{/if}}
+
+        {{! modals }}
+        {{> ConsentWindow optIn=optIn}}
+        {{> ContactForm}}
+
+    {{/if}}
+
+</template>
