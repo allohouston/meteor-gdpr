@@ -13,7 +13,6 @@ Package.describe({
 Npm.depends({
     "moment": "2.22.1",
     "simpl-schema": "1.4.3",
-    "jquery": "3.3.1",
 });
 
 Package.onUse(function (api) {
@@ -27,7 +26,6 @@ Package.onUse(function (api) {
         'accounts-base',
         'accounts-password',
         'aldeed:collection2@3.0.0',
-        'twbs:bootstrap',
         'email',
     ]);
 

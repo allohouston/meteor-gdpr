@@ -15,13 +15,16 @@
             </div>
         </div>
 
+        {{! modals }}
         {{#if showProfileWindow}}
             {{> ProfileWindow extraTemplate=extraTemplate}}
         {{/if}}
-
-        {{! modals }}
-        {{> ConsentWindow optIn=optIn}}
-        {{> ContactForm}}
+        {{#if showConsentWindow}}
+            {{> ConsentWindow optIn=optIn}}
+        {{/if}}
+        {{#if showContactForm}}
+            {{> ContactForm}}
+        {{/if}}
 
     {{/if}}
 
