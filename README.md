@@ -107,6 +107,15 @@ GDPRconfig.setUserFields({
 });
 ```
 
+### Specific logout routine
+The disconnect button use the `Meteor.logout()` function to log out users.
+
+If you need to override the behavior of the logout button (i.e. to implement single logout), you can declare the new function in your `imports/startup/client.js`:
+```javascript
+GDPR.logout = function () {
+    mySingleLogoutFunction();
+}
+```
 
 ## Contributions
 Contributions are welcome, please post issues or pull requests! This package has been created in May 2018. We tried to make it generic and easy to use to help other people who where struggling with GDPR, but it is surely not perfect. We will be very happy to see its use and functionalities growing.

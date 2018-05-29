@@ -55,7 +55,9 @@ Package.onUse(function (api) {
 
 
     // client side templates
+    api.addAssets("lib/assets/power.svg", "client");
     api.addFiles('lib/templates/profileName/profileName.js', 'client');
+
 
     // client side configuration :
     api.addFiles('lib/GDPRConfig.js', 'client');
