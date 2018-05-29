@@ -113,7 +113,9 @@ Please respect the code style when contributing, and the tests.
 
 ### How to test
 
-To test the app while developping, run the following command:
+To test the app while developping (in watch mode), run the following command:
 ```
-meteor npm run testwatch 
+cd tests 
+meteor npm install
+npm run test:watch
 ```
