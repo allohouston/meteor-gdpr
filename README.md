@@ -1,5 +1,5 @@
 # meteor-gdpr
-GDPR package for the meteor framework. 
+GDPR package for the meteor framework used with Blaze
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
