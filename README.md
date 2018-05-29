@@ -15,8 +15,13 @@ This packages requires the definition of the `MAIL_URL` variable to send emails.
 ## How to use
 Add the following to your project template
 
-```
+```html
 {{> ProfileName }}
+```
+
+You can add an extraTemplate on the lower part of the Profile window (you could use it to include some more details about the user on the lower part)
+```html
+{{> ProfileName extraTemplate="TemplateName"}}
 ```
 
 ### Email personalization
