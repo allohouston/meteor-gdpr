@@ -27,10 +27,12 @@ This package requires the [simpl-schema](https://github.com/aldeed/simple-schema
 This packages requires the definition of the `MAIL_URL` variable to send emails.
 
 ## How to use
-Create a template containing all the information you want to display in the opt-in window, you can name it as you wish. Here we name it `OptInTemplate`
+Create a template containing all the information you want to display in the opt-in window, you can name it as you wish. Here we name it `OptInTemplate`. Import it in your app.
+```javascript
+import "/imports/ui/components/optInTemplate/optInTemplate.js"
+```
 
 Add the following in your app to activate the package
-
 ```html
 {{> ProfileName optIn="OptInTemplate"}}
 ```
