@@ -53,7 +53,7 @@ Package.onUse(function (api) {
 
         'lib/api/server/index.js',
     ], 'server');
-    api.export('GDPR', 'server');
+    api.export('GDPR', ['client', 'server']);
 
 
     // client side templates
