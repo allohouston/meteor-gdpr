@@ -2,7 +2,7 @@ Package.describe({
     name: 'yellowsquare:gdpr',
     version: '1.0.0',
     // Brief, one-line summary of the package.
-    summary: '',
+    summary: 'Helps to comply with GDPR in meteor+blaze apps',
     // URL to the Git repository containing the source code for this package.
     git: 'https://github.com/yellowsquaresas/meteor-gdpr',
     // By default, Meteor will default to using README.md for documentation.
