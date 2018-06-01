@@ -21,8 +21,8 @@ Package.onUse(function (api) {
         'underscore',
         'less',
         'ecmascript',
-        'mdg:validated-method',
-        'ziarno:restrict-mixin',
+        'mdg:validated-method@1.0.0',
+        'ziarno:restrict-mixin@0.0.4',
         'accounts-base',
         'accounts-password',
         'aldeed:collection2@3.0.0',
@@ -33,7 +33,7 @@ Package.onUse(function (api) {
         'templating',
     ], 'client');
 
-    api.use('themeteorchef:bert');
+    api.use('themeteorchef:bert@2.1.3');
 
     // files in API used in both contexts
     api.addFiles([
