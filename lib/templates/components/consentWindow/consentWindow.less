@@ -9,33 +9,40 @@
     color: black;
     display: flex;
     justify-content: center;
-
     .consentWindowContainer {
-        position: absolute;
-        top: 100px;
-        width: 50%;
-        height: 500px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         border-radius: 10px;
         background-color: white;
         overflow-y: initial !important;
         padding: 10px 20px;
+    }
+}
 
-        .headerZone {
-            .headerTitle {
+@media (min-width: 768px) {
+    #ConsentWindow {
+        .consentWindowContainer {
+            position: absolute;
+            top: 100px;
+            width: 50%;
+            height: 500px;
+
+            .headerZone {
+                .headerTitle {
+
+                }
+            }
+            .mainZone {
+                overflow-y: auto;
+                height: 350px;
+                padding: 10px 0;
+
+                .optInInputZone {
+
+                }
+            }
+            .footerZone {
 
             }
-        }
-        .mainZone {
-            overflow-y: auto;
-            height: 350px;
-            padding: 10px 0;
-
-            .optInInputZone {
-
-            }
-        }
-        .footerZone {
         }
     }
 }
