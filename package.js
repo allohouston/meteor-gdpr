@@ -56,6 +56,13 @@ Package.onUse(function (api) {
 
     // client side templates
     api.addAssets("lib/assets/power.svg", "client");
+    api.addAssets("lib/assets/profile.svg", "client");
+    api.addAssets("lib/fonts/fonts/gdpr.eot", "client");
+    api.addAssets("lib/fonts/fonts/gdpr.svg", "client");
+    api.addAssets("lib/fonts/fonts/gdpr.ttf", "client");
+    api.addAssets("lib/fonts/fonts/gdpr.woff", "client");
+    api.addAssets("lib/fonts/fonts/gdpr.woff2", "client");
+    api.addFiles('lib/fonts/style.less', 'client');
     api.addFiles('lib/templates/profileName/profileName.js', 'client');
 
 
