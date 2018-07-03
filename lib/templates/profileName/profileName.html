@@ -3,14 +3,20 @@
 
         <div id="ProfileName">
             <div class="profileAccessLink js-profileAccess">
-                <div class="firstName">
-                    {{firstName}}
-                </div>
-                <div class="lastName">
-                    {{lastName}}
-                </div>
+                {{#unless onlyPicture}}
+                    <div class="firstName">
+                        {{firstName}}
+                    </div>
+                    <div class="lastName">
+                        {{lastName}}
+                    </div>
+                {{/unless}}
                 <div class="userPicture">
-                    <img src="{{picture}}" alt="User picture">
+                    {{#if picture}}
+                        <img src="{{picture}}" alt="User picture">
+                    {{else}}
+                        <i class="icon-gdpr-profile"></i>
+                    {{/if}}
                 </div>
             </div>
         </div>

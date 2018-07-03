@@ -89,23 +89,26 @@ The package needs to access the user firstname, lastname and picture, from the u
 
 Default values are :
 
-```javascript
+```json
 {
-    firstname: 'profile.firstname',
-    lastname: 'profile.lastname',
-    picture: 'profile.picture'
+    firstName: 'profile.firstName',
+    lastName: 'profile.lastName',
+    picture: 'profile.picture',
+    email: "profile.email"
 }
 ```
 
-But you can set your values as follow :
+But you can set your values as follow in your `imports/startup/client/index.js` file :
 
 ```javascript
 GDPRconfig.setUserFields({
-    firstname: 'personalData.FirstName',
-    lastname: 'personalData.surname',
-    picture: 'avatar'
+    firstName: 'personalData.FirstName',
+    lastName: 'personalData.surname',
+    picture: 'avatar',
+    email: "personalData.email"
 });
 ```
+If a field is omitted, the default value will be used.
 
 ### Specific logout routine
 The disconnect button use the `Meteor.logout()` function to log out users.
