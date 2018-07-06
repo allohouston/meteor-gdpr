@@ -91,10 +91,10 @@ Default values are :
 
 ```json
 {
-    firstName: 'profile.firstName',
-    lastName: 'profile.lastName',
-    picture: 'profile.picture',
-    email: "profile.email"
+    "firstName": "profile.firstName",
+    "lastName": "profile.lastName",
+    "picture": "profile.picture",
+    "email": "profile.email"
 }
 ```
 
@@ -117,6 +117,16 @@ If you need to override the behavior of the logout button (i.e. to implement sin
 ```javascript
 GDPR.logout = function () {
     mySingleLogoutFunction();
+}
+```
+
+### Specific callback after giving consent
+If needed to have a specific action once the user validated the consent window, you can this function, which is called right after the user validates. One use case of this callback is to enter a tutorial mode for the first visit of the user.
+
+You can declare the new function in `imports/startup/client.js`:
+```javascript
+GDPR.afterGivingConsent = function () {
+   // specific actions
 }
 ```
 
